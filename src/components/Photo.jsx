@@ -23,7 +23,7 @@ const Photo = () => {
         >
           <div className="w-[300px] h-[300px] xl:w-[500px] xl:h-[500px] mix-blend-lighten absolute">
             <Image
-              src="/assets/rehan-gans-removebg.png"
+              src="/assets/rehan-formal-removebg-preview.png"
               priority
               quality={100}
               fill

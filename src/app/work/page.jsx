@@ -149,8 +149,8 @@ const Work = () => {
                       {/* image */}
                       <div className="relative w-full h-full">
                         <Image
-                          src={project.image}
                           fill
+                          src={project.image}
                           className="object-center"
                           alt=""
                         />
@@ -160,7 +160,10 @@ const Work = () => {
                 );
               })}
               {/* slider buttons */}
-              <WorkSliderBtns containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify:none" btnStyles="bg-yellow-300 hover:bg-primary text-primary hover:text-yellow-300 text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all duration-300" />
+              <WorkSliderBtns
+                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify:none"
+                btnStyles="bg-yellow-300 hover:bg-primary text-primary hover:text-yellow-300 text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all duration-300"
+              />
             </Swiper>
           </div>
         </div>

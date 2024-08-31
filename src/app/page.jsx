@@ -26,6 +26,8 @@ const Home = () => {
               <Button
                 variant="outline"
                 size="lg"
+                download="CV-RaehanNur.pdf"
+                href="/assets/CV/CV-RaehanNur.pdf"
                 className="uppercase flex items-center gap-2"
               >
                 <span>Download CV</span>
