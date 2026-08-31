@@ -12,7 +12,7 @@ import {
   FaBootstrap,
 } from "react-icons/fa";
 
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import { SiTailwindcss, SiNextdotjs, SiTypescript } from "react-icons/si";
 
 // !about data
 const about = {
@@ -26,11 +26,11 @@ const about = {
     },
     {
       fieldName: "Phone:",
-      fieldValue: "(+62) 856 9404 9xxx",
+      fieldValue: "(+62) 856 9404 9046",
     },
     {
       fieldName: "Experience:",
-      fieldValue: "6+ Months",
+      fieldValue: "1 Year",
     },
     {
       fieldName: "Nationality:",
@@ -63,6 +63,16 @@ const experience = {
       position: "Backend Web Developer",
       duration: "2024 - present",
     },
+    {
+      company: "Mentu Indonesia",
+      position: "Fullstack Web Developer",
+      duration: "2026",
+    },
+    {
+      company: "Webgis Indonesia",
+      position: "Fullstack Web Developer",
+      duration: "2026",
+    }
   ],
 };
 
@@ -103,6 +113,10 @@ const skills = {
     {
       icon: <FaJs />,
       name: "JavaScript ",
+    },
+    {
+      icon: <SiTypescript />,
+      name: "Typescript",
     },
     {
       icon: <FaPhp />,

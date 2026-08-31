@@ -8,25 +8,18 @@ const services = [
     num: "01",
     title: "Web Development",
     description:
-      "Web development involves designing the UI/UX and developing the front-end using HTML, CSS, and JavaScript, as well as handling back-end development, which includes managing databases, servers, and application logic.",
+      "Web development involves designing the UI/UX and developing the front-end using HTML, CSS, JavaScript, and, Typescript as well as handling back-end development, which includes managing databases, servers, and application logic.",
     href: "",
   },
   {
     num: "02",
-    title: "UI/UX Design",
-    description:
-      "Design aesthetically pleasing and intuitive user interfaces, and design efficient user flows and information structures to ensure a smooth and satisfying experience.",
-    href: "",
-  },
-  {
-    num: "03",
     title: "API Development & Integration",
     description:
       "API development and integration to allow web applications to communicate with other applications or third-party services efficiently.",
     href: "",
   },
   {
-    num: "04",
+    num: "03",
     title: "E-commerce Development",
     description:
       "Creation and management of a secure and easy-to-use e-commerce platform, with features such as shopping cart, online payment, and product management.",

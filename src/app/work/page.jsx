@@ -22,36 +22,25 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "Fullstack Web",
-    title: "Puskesmas App",
+    category: "Frontend Web",
+    title: "Webgis Indonesia",
     description:
-      "The puskesmas website provides information on the various health services available, such as doctor's schedules, types of services offered, work units, and medical procedures. Patients can easily find out the services they need without having to come directly to the puskesmas.",
-    stack: [{ name: "Html 5" }, { name: "PHP" }, { name: "Bootstrap" }],
-    image: "/assets/work/puskesmas.png",
-    live: "",
-    github: "https://github.com/Raehan123/projek-puskesmas-app",
+      "a geographic information system or digital mapping system that can be accessed online via a web browser using the Internet.",
+    stack: [{ name: "NextJS" }, { name: "Typescript" }, { name: "Tailwind CSS" }, { name: "PostgreSQL" }],
+    image: "/assets/work/webgis.png",
+    live: "https://webgis.co.id/",
+    github: "https://github.com/Raehan123/raydev",
   },
   {
     num: "02",
     category: "Fullstack Web",
-    title: "Electronic E-commerce",
+    title: "Mentu Indonesia",
     description:
-      "E-commerce features on the website make it easy for shoppers to buy online without having to go to the place and provide a wide range of products from different categories and brands, allowing shoppers to compare multiple options on a single platform, shoppers can also view reviews and ratings from other users who have purchased the product, helping in decision making.",
-    stack: [{ name: "Laravel 11" }, { name: "Node Js" }, { name: "Bootstrap" }],
-    image: "/assets/work/radarabi.png",
-    live: "https://ecommerceradarabi.vistacinema.digital/",
-    github: "https://github.com/Raehan123/projek-uas-pemweb",
-  },
-  {
-    num: "03",
-    category: "UI/UX Design",
-    title: "Field Project Timah",
-    description:
-      "Field website features for soccer players can easily check field availability, opening hours, and vacant schedules so as to facilitate planning to play, Allows online field reservations, which makes it easier for players to secure a place without having to come in person.",
-    stack: [{ name: "Figma" }],
-    image: "/assets/work/uiux-figma.png",
-    live: "",
-    github: "",
+      "Mentu is a digital platform developed to help food-related SMEs promote their businesses while making it easier for users to choose where to eat",
+    stack: [{ name: "NextJS" }, { name: "PostgreSQL" }, { name: "Tailwind CSS" }],
+    image: "/assets/work/mentu.png",
+    live: "https://mentu.id/",
+    github: "https://github.com/InsanBusted/mentu-web",
   },
 ];
 

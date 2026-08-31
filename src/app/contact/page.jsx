@@ -20,7 +20,7 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description: "(+62) 856 9404 9xxx",
+    description: "(+62) 856 9404 9046",
   },
   {
     icon: <FaEnvelope />,
@@ -35,42 +35,28 @@ const info = [
 ];
 
 import { motion } from "framer-motion";
-import Swal from "sweetalert2";
+import Link from "next/link";
 
 const Contact = () => {
-  async function handleSubmit(e) {
+  const WHATSAPP_NUMBER = "6285694049046";
+
+  function handleSubmit(e) {
     e.preventDefault();
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application.json",
-      },
-      body: JSON.stringify({
-        access_key: "f50cb80a-3843-486f-b702-c5bc4f2536b3",
-        firstname: e.target.firstname.value,
-        lastname: e.target.lastname.value,
-        email: e.target.email.value,
-        phone: e.target.phone.value,
-        service: e.target.service.value,
-        message: e.target.message.value,
-      }),
-    });
-    const result = await response.json();
-    if (result.success) {
-      Swal.fire({
-        title: "Success!",
-        text: "Message Sent Successfully",
-        icon: "success",
-      });
-    } else {
-      Swal.fire({
-        title: "Error!",
-        text: "Message Failed to Send!",
-        icon: "error",
-      });
-    }
+
+    const firstname = e.target.firstname.value;
+    const lastname = e.target.lastname.value;
+    const email = e.target.email.value;
+    const phone = e.target.phone.value;
+    const message = e.target.message.value;
+
+    const text = `Halo, saya ${firstname} ${lastname}.%0A%0AEmail: ${email}%0ANo. HP: ${phone || "-"}%0A%0APesan:%0A${message}`;
+
+    const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
+
+    window.open(waUrl, "_blank");
+    e.target.reset();
   }
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -96,43 +82,22 @@ const Contact = () => {
                 or suggestion, I would love to hear from you, please fill out
                 the question or suggestion below.
               </p>
-              {/* input */}
+              {/* input fields */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input
-                  type="firstname"
-                  placeholder="Firstname"
-                  name="firstname"
-                />
-                <Input type="lastname" placeholder="Lastname" name="lastname" />
-                <Input type="email" placeholder="Email Address" name="email" />
-                <Input type="phone" placeholder="Phone Number" name="phone" />
+                <Input type="text" name="firstname" placeholder="Firstname" required />
+                <Input type="text" name="lastname" placeholder="Lastname" required />
+                <Input type="email" name="email" placeholder="Email address" required />
+                <Input type="tel" name="phone" placeholder="Phone number" />
               </div>
-              {/* select */}
-              <Select name="service">
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a service" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectLabel className="text-center text-2xl">
-                      Select a service
-                    </SelectLabel>
-                    <SelectItem value="web development">
-                      Web Development
-                    </SelectItem>
-                    <SelectItem value="uiux">UI/UX Design</SelectItem>
-                    <SelectItem value="logo">Logo Design</SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
               {/* textarea */}
               <Textarea
+                name="message"
                 className="h-[200px]"
                 placeholder="Type your message here."
-                name="message"
+                required
               />
               {/* btn */}
-              <Button size="md" className="max-w-40">
+              <Button type="submit" size="md" className="max-w-40">
                 Send Message
               </Button>
             </form>
